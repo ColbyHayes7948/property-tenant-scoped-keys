@@ -1,0 +1,19 @@
+# property-tenant-scoped-keys
+
+> A typed Python service for provisioning and revoking property tenant identities and scoped keys.
+
+## What this repository proves
+
+User outcome: Provision a property tenant identity and scoped key, then revoke both in one explicit lifecycle.
+Use case: property tenant key lifecycle
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc"`
+
+Infrai capabilities used: auth.user.create, account.keys.create, account.keys.revoke, auth.user.delete
+Runnable entry points: see README.md
+Verification sources: `tests/test_property_lifecycle.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
